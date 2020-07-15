@@ -19,7 +19,7 @@ def remove_name(names):
   if name in names:
     names.remove(name)
   else:
-    print('O nome %s não existe na lista' % (name))
+    print('O nome {} não existe na lista'.format(name))
 
 def change_name(names):
   print('Digite o nome que deseja alterar:')
@@ -42,7 +42,7 @@ def re_search_name(names):
     result = re.findall(name, names_concat)
     print(result)
   else:
-    print('O nome %s não existe na lista.' % (name))
+    print('O nome {} não existe na lista.'.format(name))
 
 def menu():
   names = []

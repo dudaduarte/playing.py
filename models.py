@@ -13,7 +13,7 @@ class Profile(object):
     self.__likes = 0
 
   def print(self):
-    print('Nome: %s, Telefone: %s, Empresa: %s, Curtidas: %s' % (
+    print('Nome: {}, Telefone: {}, Empresa: {}, Curtidas: {}'.format(
       self.name,
       self.phone,
       self.company,
@@ -27,7 +27,7 @@ class Profile(object):
     return self.__likes
 
   @classmethod
-  def print_all(self, profiles_list):
+  def print_all(cls, profiles_list):
     for profile in profiles_list:
       profile.print()
 
@@ -44,7 +44,7 @@ class Profile(object):
           profiles.append(cls(*profile_params))
       return profiles
     except Exception as error:
-        print('Error: %s' % error)
+        print('Error: {}'.format(error))
     finally:
       if(file is not None):
         file.close()
